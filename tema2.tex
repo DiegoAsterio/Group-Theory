@@ -169,6 +169,20 @@ Sea $n \ge 2$ y consideremos el grupo $S_n$:
 \end{proposition}
 
 \begin{proof}
+  \\
+  1.Adoptando la siguiente notación $\sigma = (x_1 \, x_2 \, ... \, x_r)$ y $\tau = (x_r \, x_{r-1} \, ... \, x_1)$.
+  
+  Sea $i \in \{2,3,...,r\}$ se tiene que $\sigma \circ \tau (x_i) = \sigma(x_{i-1}) = x_i$.
+
+  Si $i = 1$ entonces $\sigma \circ \tau (x_1) = \sigma(x_r) = x_1$ y por lo tanto $\sigma \circ \tau = id$. 
+
+  Ahora para $i \in {1,2,...,r-1}$ con $\tau \circ \sigma (x_i) = \tau(x_{i+1}) = x_i $ y si $i = r$ $\tau \circ \sigma(x_r)= tau(x_1) =x_r$. Hemos llegado a que $\sigma \circ \tau = \tau \circ \sigma = id$ con lo que deducimos que $\tau = sigma^{-1}$
+\\
+  2. Se toma aqui $i \in {1,2,...,r-1}$ podemos observar que para $k > i$ los ciclos $(i_k, i_{k+1})$ actuan como la identidad por lo que $(x_1 \, x_2)(x_2 \, x_3)...(x_{r-1} \, x_r)(x_i) = (x_1 \, x_2)(x_2 \, x_3)...(x_{i} \, x_{i+i})(x_i) = (x_1 \, x_2)(x_2 \, x_3)...(x_{i-1} \, x_{i})(x_{i+i})$ y después podemos ver como para $k<i$ los ciclos $(x_k,x_k+1)$ posteriores actuan como la identidad para $x_{i+1}$. Por lo que $(x_1 \, x_2)(x_2 \, x_3)...(x_{r-1} \, x_r)(x_i) = x_{i+1}$. Si $i =r$ todos los ciclos afectan a $x_i$ y reducen en $1$ su indice tras $r-1$ ciclos tenemos que $x_2 \, x_3)...(x_{r-1} \, x_r)(x_r) = x_{r-1}$. De lo que se deduce 2.
+\\
+  3. Sea $i \in {1,...,r}$ si tomamos $\alpha(x_i)$ y le aplicamos $\alpha \sigma \alpha^{-1} (\alpha(x_i)) = \alpha(\sigma(x_i))$ y como tenemos que $sigma(x_i) = x_{i+1}$ si $ i \in {1,...,r-1} $ y $\sigma(x_r) = x_1$ se tiene bin el resultado.
+\\
+  4. Supongamos que para $k$ menor que $n$ se tiene que $\sigma^k = id$ .Tomemos ahora $x_1$ tenemos que $sigma^k(x_1) = sigma^{k-1}(x_2) = sigma^{k-2}(x_3) =x_k \neq x_1$. En efecto, el orden es $n$ $sigma^{n}(x_i) =x_{Res(i+n,n)}= x_n$ 
 
 \end{proof}
 
@@ -231,8 +245,8 @@ $Q_2 = \{
 1 := \begin{bmatrix}
     1 & 0  \\
     0 & 1 
--1 := \end{bmatrix},
-\begin{bmatrix}
+\end{bmatrix},
+-1 := \begin{bmatrix}
     -1 & 0  \\
     0 & -1 
 \end{bmatrix},
